@@ -20,6 +20,7 @@ let textInfo;
 if (examGrade >= 0 && examGrade <= 100) {
     // tum if yapıları buraya gelsin
     textInfo = SMAILE
+    info.classList.add('text-primary')
     if (examGrade >= 90) {
         textInfo += " AA"
     } else if (examGrade >= 85) {
@@ -40,6 +41,8 @@ if (examGrade >= 0 && examGrade <= 100) {
         textInfo += " FD"
     }else if (examGrade  < 50) {
         textInfo = `${SAD} FF`
+        info.classList.remove('text-primary')
+        info.classList.add('text-danger')
     }
 } else {
      textInfo = "Bilgiler doğru değil"
